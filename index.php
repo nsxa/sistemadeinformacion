@@ -20,13 +20,62 @@ $(document).ready(function(){
 	
 	$("#ingresar").click(function(){
 		
-		alert("ingresar");
+		var userr=$("#user").value;
+		alert(userr);
+		
+		alert("ingresarr");
+				
+				var username=$("#user").val();
+				var password=$("#pass").val();
+				var dataString = 'username='+username+'&password='+password;
+				
+				$.ajax({
+				type: "GET",
+				url: "ajaxLogin.php?"+dataString,
+				data : dataString,
+				cache: false,
+
+				success: function(d){
+				
+	
+					alert("data");
+//$("body").load("dashboard.php").hide().fadeIn(1500).delay(6000);
+
+					window.location = "dashboard.php";
+					
+				},
+				});
+		})
+
+		
+		/*
+		$.ajax({
+			url : "dashboard.php",
+			type: "POST",
+			data : $("#formingresar").serialize(),
+			
+			//alert(data);
+			var user=$("#user").val;
+			
+			success: function(r)
+			{
+			window.location = 'dashboard.php?user='.user;
+				
+			alert("ingresar");
+			$("#response").html(r);
+			},
+			});*/
+			
+			//window.location = 'dashboard.php';
+			
+alert("ingresar2");
+
 		});
 	
-});
-</script>
-</script>
 
+</script>
+</script>
+<form id="formingresar">
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Ingresar</label>
@@ -34,11 +83,11 @@ $(document).ready(function(){
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
-					<label for="user" class="label">Correo</label>
+					<label for="userf" class="label">Correo</label>
 					<input id="user" type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Password</label>
+					<label for="passr" class="label">Password</label>
 					<input id="pass" type="password" class="input" data-type="password">
 				</div>
 				
@@ -47,6 +96,9 @@ $(document).ready(function(){
 					<button id="ingresar" type="button" class="btn btn-primary">Ingresar</button>
 					
 				</div>
+				
+				</form>
+				
 				<div class="hr"></div>
 				<div class="foot-lnk">
 					<a href="#forgot">Olvidaste tu password?</a>
@@ -54,20 +106,20 @@ $(document).ready(function(){
 			</div>
 			<div class="sign-up-htm">
 				<div class="group">
-					<label for="user" class="label">Usuario</label>
-					<input id="user" type="text" class="input">
+					<label for="userff" class="label">Usuario</label>
+					<input id="user2" type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="passrr" class="label">Password</label>
+					<input id="pass2" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Repetir Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="passrrr" class="label">Repetir Password</label>
+					<input id="pass22" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Email</label>
-					<input id="pass" type="text" class="input">
+					<input id="pass2" type="text" class="input">
 				</div>
 				<div class="group">
 				
@@ -82,5 +134,12 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
+
+<div id="response">
+
+respuesta
+
+</div>
+
 
 </html>
