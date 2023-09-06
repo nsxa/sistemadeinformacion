@@ -1,10 +1,25 @@
 <?php
+
+// Motrar todos los errores de PHP
+error_reporting(-1);
+
+// No mostrar los errores de PHP
+error_reporting(0);
+
+// Motrar todos los errores de PHP
+error_reporting(E_ALL);
+
+// Motrar todos los errores de PHP
+ini_set('error_reporting', E_ALL);
+
+
 class Db{
 	
 	private $con;
 	
 	public function conectar(){
-$this->con=mysqli_connect("localhost","root","Arpanet61009","sistemadeinformacion",3306);
+//$this->con=mysqli_connect("localhost","root","Arpanet61009","sistemadeinformacion",3306);
+$this->con=mysqli_connect("sql213.infinityfree.com","if0_34979473","NuDOvdJ2A6Ga6W","if0_34979473_sdi",3306);
 // Check connection
 if (mysqli_connect_errno())
   {

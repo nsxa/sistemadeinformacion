@@ -1,17 +1,4 @@
 <?php 
-
-// Motrar todos los errores de PHP
-error_reporting(-1);
-
-// No mostrar los errores de PHP
-error_reporting(0);
-
-// Motrar todos los errores de PHP
-error_reporting(E_ALL);
-
-// Motrar todos los errores de PHP
-ini_set('error_reporting', E_ALL);
-
 include 'usuarios.php';
 
 if(isset($_POST["nombre"]))
@@ -30,9 +17,6 @@ if(isset($_POST["nombre"]))
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-
-
-	//alert("aqui");
 
 	$("#ingresar").click(function(){var nombre=$("#nombre").val();var correo=$("#correo").val();var password=$("#password").val();if(nombre=="")
 		{
