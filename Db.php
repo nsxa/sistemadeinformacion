@@ -16,7 +16,7 @@ if (mysqli_connect_errno())
   {
 	  
 	  echo $c;
-	  exit();
+	  //exit();
 	  $resultado = mysqli_query($this->con,$c);
 if (!$resultado) {
     echo 'No se pudo ejecutar la consulta: ' . mysql_error();
