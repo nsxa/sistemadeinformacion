@@ -41,7 +41,7 @@ $(document).ready(function(){
 					
 //$("body").load("dashboard.php").hide().fadeIn(1500).delay(6000);
 
-					window.location = "/sistemadeinformacion/argondashboard/index.php";
+					window.location = "http://sdi.web1337.net/argondashboard/index.php";
 					
 				},
 				});
