@@ -11,19 +11,19 @@
 <script>
 $(document).ready(function(){
 	
-	alert("Hola");
+	
 	
 	$("#registrarse").click(function(){
 		
-		alert("registrarse");
+		
 		});
 	
 	$("#ingresar").click(function(){
 		
 		var userr=$("#user").value;
-		alert(userr);
 		
-		alert("ingresarr");
+		
+		
 				
 				var username=$("#user").val();
 				var password=$("#pass").val();
@@ -38,7 +38,7 @@ $(document).ready(function(){
 				success: function(d){
 				
 	
-					alert("data");
+					
 //$("body").load("dashboard.php").hide().fadeIn(1500).delay(6000);
 
 					window.location = "dashboard.php";
@@ -68,7 +68,7 @@ $(document).ready(function(){
 			
 			//window.location = 'dashboard.php';
 			
-alert("ingresar2");
+
 
 		});
 	
