@@ -1,7 +1,7 @@
 <?php
 /*jade Persistencia */
 include 'Db.php';
-$tabla="usuarios";
+$tabla="registros";
 
 $con= new Db;
 
